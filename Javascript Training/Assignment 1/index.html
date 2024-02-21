@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>DART AGENCY</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/master.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="main-header clearfix">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-sm">
+          <div class="container">
+            <a class="navbar-brand" href="#">Dart Agency</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mynavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- page content -->
+      <main class="page-content">
+        <section class="contact-section">
+          <div class="container clearfix">
+            <div class="row">
+              <header class="section-header">
+                <h2>Javascript Assignment 1</h2>
+              </header>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-col">
+                  <h3>Task 1</h3>
+                  <p>
+                    Accept first name and last name and when the button is
+                    clicked, display full name. In the full name, the first
+                    letter in first name and last name should be capitalized
+                    even if the names are entered in small letters.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group clearfix">
+                  <label for="firstname" class="sr-only">First Name</label>
+                  <input
+                    id="firstname"
+                    class="form-control"
+                    placeholder="First Name"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group clearfix">
+                  <label for="lastname" class="sr-only">Last Name</label>
+                  <input
+                    id="lastname"
+                    class="form-control"
+                    placeholder="Last Name"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group clearfix">
+                  <input
+                    class="btn btn-primary"
+                    value="Submit"
+                    type="submit"
+                    onclick="fullName()"
+                  />
+                </div>
+                <div class="form-group clearfix" id="fullName"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contact-section">
+          <div class="container clearfix">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-col">
+                  <h3>Task 1</h3>
+                  <p>
+                    Accept first name and last name and when the button is
+                    clicked, display full name. In the full name, the first
+                    letter in first name and last name should be capitalized
+                    even if the names are entered in small letters.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group clearfix">
+                  <label for="firstname" class="sr-only">First Name</label>
+                  <input
+                    id="firstname"
+                    class="form-control"
+                    placeholder="First Name"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group clearfix">
+                  <label for="lastname" class="sr-only">Last Name</label>
+                  <input
+                    id="lastname"
+                    class="form-control"
+                    placeholder="Last Name"
+                    type="text"
+                  />
+                </div>
+                <div class="form-group clearfix">
+                  <input
+                    class="btn btn-primary"
+                    value="Submit"
+                    type="submit"
+                    onclick="fullName()"
+                  />
+                </div>
+                <div class="form-group clearfix" id="fullName"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="social-media">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fab fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fab fa-twitter" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fab fa-google-plus" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fab fa-linkedin" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright">
+              <p>&copy; Copyright 2024 DART AGENCY All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function fullName() {
+        const firstName = document.getElementById("firstname").value;
+        const lastName = document.getElementById("lastname").value;
+
+        const fullName =
+          firstName.charAt(0).toUpperCase() +
+          firstName.slice(1) +
+          " " +
+          lastName.charAt(0).toUpperCase() +
+          lastName.slice(1);
+
+        document.getElementById("fullName").textContent = fullName;
+      }
+    </script>
+
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
