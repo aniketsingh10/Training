@@ -1,0 +1,171 @@
+<html>
+
+<head>
+  <title>Javascript Assignment</title>
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+      <!-- Task 1 -->
+      <div class="col-md-10 m-auto mt-4">
+        <h1>Javascript Assignment 1</h1>
+        <br />
+        <h5>Task 1</h5>
+        <h6>
+          Accept first name and last name and when the button is clicked,
+          display full name. In the full name, the first letter in first name
+          and last name should be capitalized even if the names are entered in
+          small letters.
+        </h6>
+        <br />
+        <div style="width: 70%">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="first_name" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="first_name" name="first_name" maxlength="25"
+                onKeyup="this.value = this.value.replace(/[^A-Za-z]/g, '')" />
+
+            </div>
+            <div class="col-md-6">
+              <label for="last_name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="last_name" name="last_name" maxlength="25"
+                onKeyup="this.value = this.value.replace(/[^A-Za-z]/g, '')" />
+
+            </div>
+
+          </div>
+          <br />
+          <div class="mb-3">
+            <input type="button" name="but_show" id="but_show" class="btn btn-primary" value="Full Name"
+              onClick="fullName()" />
+            <div class="error" id="err_marks"></div>
+          </div>
+        </div>
+        <p id="full_name"></p>
+      </div>
+
+
+      <!-- Task 2 -->
+      <div class="col-md-10 m-auto mt-4">
+        <h5>Task 2</h5>
+        <h6>
+          Accept a string, a word to replace and the new word. When the button
+          is clicked replace the stated word in the string by the new word and
+          display the changed string.
+        </h6>
+        <br />
+        <div style="width: 70%">
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label for="input_string" class="form-label">Input String</label>
+              <input type="text" class="form-control" id="input_string" name="input_string" />
+            </div>
+
+            <div class="col-md-6">
+              <label for="replace_word" class="form-label">Replace Word</label>
+              <input type="text" class="form-control" id="replace_word" name="replace_word"  />
+            </div>
+
+            <div class="col-md-6">
+              <label for="new_word" class="form-label">New Word</label>
+              <input type="text" class="form-control" id="new_word" name="new_word" />
+            </div>
+            <br />
+            <div class="mb-3">
+              <input type="button" name="but_show" id="but_show" class="btn btn-primary" value="New String"
+                onClick="replaceWord()" />
+              <div class="error" id="err_marks"></div>
+            </div>
+          </div>
+          <p id="new_string"></p>
+        </div>
+      </div>
+
+
+      <!-- Task 3 -->
+      <div class="col-md-10 m-auto mt-4">
+        <h5>Task 3</h5>
+        <h6>
+          Accept a word. When the button is clicked display the word with reversed characters. e.g. The word 'Test'
+          should be displayed as 'tseT'.
+        </h6>
+        <br />
+        <div style="width: 70%">
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label for="input-string" class="form-label">Input String</label>
+              <input type="text" class="form-control" id="input-string" name="input-string"  />
+            </div>
+          </div>
+          <br />
+          <div class="mb-3">
+            <input type="button" name="but_show" id="but_show" class="btn btn-primary" value="Reverse String"
+              onClick="reverseString()" />
+          </div>
+        </div>
+        <p id="reverse_string"></p>
+      </div>
+
+
+      <!-- Task 4 -->
+      <div class="col-md-10 m-auto mt-4">
+        <h5>Task 4</h5>
+        <h6>
+          Accept a fractional number and the number of digits to displayed after decimal. When the button is clicked,
+          round a number to a specified amount of digits and display.
+        </h6>
+        <br />
+        <div style="width: 70%">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="fractional_number" class="form-label">Fractional Number</label>
+              <input type="text" class="form-control" id="fractional_number" name="fractional_number" maxlength="10"
+                onKeyup="this.value = this.value.replace(/[^0-9.]/g, '')" >
+            </div>
+            <div class="col-md-6">
+              <label for="digits" class="form-label">Digits</label>
+              <input type="text" class="form-control" id="digits" name="digits" maxlength="2"
+                onKeyup="this.value = this.value.replace(/[^0-9]/g, '')"  />
+            </div>
+          </div>
+          <br />
+          <div class="mb-3">
+            <input type="button" name="but_show" id="but_show" class="btn btn-primary" value="Round Number"
+              onClick="roundNumber()" />
+          </div>
+        </div>
+        <p id="r_number"></p>
+      </div>
+
+
+      <!-- Task 5 -->
+      <div class="col-md-10 m-auto mt-4 mb-5">
+        <h5>Task 5</h5>
+        <h6>
+          Display the current day and time in the following format: Today is : Tuesday. Current time is : 10 PM : 30 :
+          38
+        </h6>
+        <br />
+        <div style="width: 70%">
+          <div class="mb-3">
+            <input type="button" name="but_show" id="but_show" class="btn btn-primary" value="Get Date"
+              onClick="getCurrentDateTime()" />
+          </div>
+        </div>
+        <p id="date"></p>
+        <p id="time"></p>
+      </div>
+
+
+    </div>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
