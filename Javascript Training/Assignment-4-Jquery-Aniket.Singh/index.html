@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Validate Form</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery-confirm.min.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5 mb-5">
+      <h1>JavaScript JQuery Ajax Assignment 4</h1>
+      <p>Product List :-</p>
+      <table
+        class="table table-bordered product"
+        id="product_table"
+        action=""
+        method="post"
+      >
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+            <th>Total (Quantity*Price)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="product_name_1"
+                placeholder="Product name"
+                maxlength="20"
+              />
+              <span id="err_product_name_1" class="error"></span>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="product_quantity_1"
+                maxlength="8"
+                placeholder="Number of items"
+                onKeyup="this.value = this.value.replace(/[^0-9]/g, '')"
+              />
+              <span id="err_product_quantity_1" class="error"></span>
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="product_price_1"
+                maxlength="8"
+                placeholder="Price per item"
+                onKeyup="this.value = this.value.replace(/[^0-9.]/g, '')"
+              />
+              <span id="err_product_price_1" class="error"></span>
+            </td>
+            <td>
+              <input
+                type="button"
+                class="btn btn-primary calculate_price"
+                value="Calculate"
+                data-index="1"
+              />
+            </td>
+            <td>
+              <span id="total_price_1"></span>
+              <span id="err_total_price_1" class="error"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <input
+        type="button"
+        name="add_more"
+        id="add_more"
+        class="btn btn-primary"
+        value="+ Add More"
+      />
+
+      <input
+        type="button"
+        name="total"
+        id="total"
+        class="btn btn-primary"
+        value="Show Total"
+      />
+      <h3 id="final_bill" class="mt-2"></h3>
+    </div>
+  </body>
+
+  <!-- Javascript files -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/jquery-confirm.min.js"></script>
+</html>
