@@ -1,6 +1,8 @@
 -- create database
 CREATE DATABASE BookStore15;
+GO
 USE BookStore15;
+GO
 
 -- book table
 CREATE TABLE Book (
@@ -10,6 +12,7 @@ CREATE TABLE Book (
     PublicationYear INT,
     Price DECIMAL(10, 2)
 );
+GO
 
 INSERT INTO Book VALUES
     (1, 'The Catcher in the Rye', 'J.D. Salinger', 2004, 19.99),
@@ -22,8 +25,10 @@ INSERT INTO Book VALUES
     (8, 'The Da Vinci Code', 'Dan Brown', 2022, 25.99),
     (9, 'Pride and Prejudice', 'Jane Austen', 2015, 18.99),
     (10, 'The Shining', 'Stephen King', 2005, 27.99);
+GO
 
 SELECT * FROM Book;
+GO
 
 -- agency table
 CREATE TABLE Agency (
@@ -33,6 +38,7 @@ CREATE TABLE Agency (
     ContactPerson NVARCHAR(255),
     Phone VARCHAR(15)
 );
+GO
 
 INSERT INTO Agency VALUES
     (1, 'HSC Books', 'Nashik', 'John Doe', '1234567890'),
@@ -45,30 +51,35 @@ INSERT INTO Agency VALUES
     (8, 'Novel Nook', 'Pune', 'Sara Miller', '8888888888'),
     (9, 'Literary Lounge', 'Nashik', 'Michael Brown', '9999999999'),
     (10, 'Bookshelf Boutique', 'Nashik', 'Emma Davis', '1239876543');
+GO
 
 SELECT * FROM Agency;
+GO
 
 -- declare variables
 DECLARE @bookCount INT;
 SELECT @bookCount = COUNT(*) FROM Book;
-PRINT @bookCount;
+SELECT @bookCount AS BookCount;
+GO
 
 DECLARE @lowCostBooks INT;
 SELECT @lowCostBooks = COUNT(*) FROM Book WHERE Price < 20.00;
-PRINT @lowCostBooks;
+SELECT @lowCostBooks AS LowCostBooks;
+GO
 
 DECLARE @latestYear INT;
 SELECT @latestYear = MAX(PublicationYear) FROM Book;
-PRINT @latestYear;
+SELECT @latestYear AS LastYear;
+GO
 
 DECLARE @agencyCount INT;
 SELECT @agencyCount = COUNT(*) FROM Agency;
-PRINT @agencyCount;
+SELECT @agencyCount AS AgencyCount;
+GO
 
--- select query
+-- select queries
 SELECT Title, Author, PublicationYear FROM Book WHERE Price > 20.00;
+GO
+
 SELECT Name, ContactPerson FROM Agency WHERE Location = 'Nashik';
-
-
-
-
+GO
